@@ -3,13 +3,24 @@ import Link from "next/link";
 
 class OpenSlideBar extends React.Component {
   state = {
-    showMenu: false
+    showMenu: false,
+    showSecondMenu: false
   };
 
   showMenu = e => {
     this.setState(prevState => {
       return {
-        showMenu: !prevState.showMenu
+        showMenu: !prevState.showMenu,
+        showSecondMenu: false
+      };
+    });
+  };
+
+  showSecondMenu = e => {
+    this.setState(prevState => {
+      return {
+        showSecondMenu: !prevState.showSecondMenu,
+        showMenu: false
       };
     });
   };
@@ -19,6 +30,10 @@ class OpenSlideBar extends React.Component {
     if (this.props.show) {
       drawerClasses = "side-drawer open";
     }
+    // let dropClasses = "drop-down-content";
+    // if (this.state.showMenu) {
+    //   dropClasses = "drop-down-content open-drop";
+    // }
     return (
       <nav className={drawerClasses}>
         <Ul>
@@ -28,23 +43,23 @@ class OpenSlideBar extends React.Component {
             </Link>
           </li>
           <li>
-            <Dropdown>
+            <div className="drop-down">
               <A onClick={this.showMenu}>PORTFOLIO</A>
               {this.state.showMenu && (
-                <DropdownContent>
+                <div className="drop-down-content">
                   <DropdownLi margy heigh>
                     <Link href="/wedding">
-                      <A>Wedding</A>
+                      <A>WEDDING</A>
                     </Link>
                   </DropdownLi>
                   <DropdownLi>
                     <Link href="/light">
-                      <A>Natural light</A>
+                      <A>NATURAL LIGHT</A>
                     </Link>
                   </DropdownLi>
-                </DropdownContent>
+                </div>
               )}
-            </Dropdown>
+            </div>
           </li>
 
           <li>
@@ -53,9 +68,23 @@ class OpenSlideBar extends React.Component {
             </Link>
           </li>
           <li>
-            <Link href="/video">
-              <A>VIDEO</A>
-            </Link>
+            <div className="drop-down">
+              <A onClick={this.showSecondMenu}>VIDEO</A>
+              {this.state.showSecondMenu && (
+                <DropdownContent>
+                  <DropdownLi margy heigh>
+                    <Link href="/photoshoots">
+                      <A>PHOTOSHOOTS: making of</A>
+                    </Link>
+                  </DropdownLi>
+                  <DropdownLi>
+                    <Link href="/travel">
+                      <A>TRAVEL VIDEO</A>
+                    </Link>
+                  </DropdownLi>
+                </DropdownContent>
+              )}
+            </div>
           </li>
           <li>
             <Link href="/clients">
@@ -70,6 +99,25 @@ class OpenSlideBar extends React.Component {
         </Ul>
         <style jsx>
           {`
+            .drop-down-content {
+              display: flex;
+              display: block;
+              flex-wrap: wrap;
+              flex: auto;
+              background-color: white;
+              width: 120px;
+              z-index: 1;
+              font-size: 10px;
+            }
+            // .drop-down-content.open-drop {
+            //   transform: translateY(100px)
+            // }
+            .drop-down {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
             .side-drawer {
               height: 100%;
               background: white;
@@ -95,7 +143,7 @@ class OpenSlideBar extends React.Component {
 
 export default OpenSlideBar;
 
-const Dropdown = styled.div``;
+// const Dropdown = styled.div``;
 
 const DropdownLi = styled.div`
   display: flex;
@@ -111,8 +159,9 @@ const DropdownContent = styled.div`
   flex-wrap: wrap;
   flex: auto;
   background-color: white;
-  width: 90px;
+  width: 120px;
   z-index: 1;
+  font-size: 10px;
 `;
 
 const Ul = styled.ul`
