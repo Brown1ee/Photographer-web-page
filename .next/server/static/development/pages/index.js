@@ -424,7 +424,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-wrap: wrap;\n  flex: auto;\n  display: none;\n  position: absolute;\n  background-color: white;\n  width: 190px;\n  z-index: 1;\n  ", ":hover & {\n    display: block;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background-color: white;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  flex: auto;\n  visibility: hidden;\n  opacity: 0;\n  position: absolute;\n  width: 100px;\n  margin-left: 20px;\n  transform: translateY(-3px);\n  z-index: -1;\n  transition: all 0.3s ease-in-out;\n  ", ":hover & {\n    display: block;\n    visibility: visible;\n    opacity: 1;\n    z-index: 1;\n    transform: translateY(0%);\n    transition-delay: 0s, 0s, 0.5s;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -434,7 +434,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  height: ", ";\n  justify-content: flex-start;\n  align-items: center;\n  margin-top: ", ";\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  height: ", ";\n  justify-content: center;\n  align-items: center;\n  margin-top: ", ";\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -556,12 +556,13 @@ var Navbar = function Navbar(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavLi, {
+    marg: true,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: this
-  }, "Wedding"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(DropdownLi, {
+  }, "WEDDING"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(DropdownLi, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
@@ -575,12 +576,13 @@ var Navbar = function Navbar(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavLi, {
+    marg: true,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
     },
     __self: this
-  }, "Natural light")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+  }, "NATURAL LIGHT")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
@@ -639,6 +641,7 @@ var Navbar = function Navbar(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavLi, {
+    marg: true,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
@@ -658,6 +661,7 @@ var Navbar = function Navbar(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavLi, {
+    marg: true,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
@@ -711,7 +715,7 @@ var DropdownLi = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_t
 }, function (props) {
   return props.margy ? "20px" : "0px";
 });
-var DropdownContent = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject3(), Dropdown);
+var DropdownContent = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.ul(_templateObject3(), Dropdown);
 var Div = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div(_templateObject4());
 var NavOne = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.ul(_templateObject5());
 var Nav = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.ul(_templateObject6());

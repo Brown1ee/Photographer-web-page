@@ -24,12 +24,12 @@ const Navbar = props => (
           <DropdownContent>
             <DropdownLi margy heigh>
               <Link href="/wedding">
-                <NavLi>Wedding</NavLi>
+                <NavLi marg>WEDDING</NavLi>
               </Link>
             </DropdownLi>
             <DropdownLi>
               <Link href="/light">
-                <NavLi>Natural light</NavLi>
+                <NavLi marg>NATURAL LIGHT</NavLi>
               </Link>
             </DropdownLi>
           </DropdownContent>
@@ -46,12 +46,12 @@ const Navbar = props => (
           <DropdownContent>
             <DropdownLi margy heigh>
               <Link href="/photoshoots">
-                <NavLi>PHOTOSHOOTS: making of</NavLi>
+                <NavLi marg>PHOTOSHOOTS: making of</NavLi>
               </Link>
             </DropdownLi>
             <DropdownLi>
               <Link href="/travel">
-                <NavLi>TRAVEL VIDEO</NavLi>
+                <NavLi marg>TRAVEL VIDEO</NavLi>
               </Link>
             </DropdownLi>
           </DropdownContent>
@@ -77,22 +77,32 @@ const Dropdown = styled.div``;
 const DropdownLi = styled.div`
   display: flex;
   height: ${props => (props.heigh ? "50px" : "45px")};
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-top: ${props => (props.margy ? "20px" : "0px")};
 `;
 
-const DropdownContent = styled.div`
+const DropdownContent = styled.ul`
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   flex: auto;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  background-color: white;
-  width: 190px;
-  z-index: 1;
+  width: 100px;
+  margin-left: 20px;
+  transform: translateY(-3px);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
   ${Dropdown}:hover & {
     display: block;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.5s;
   }
 `;
 
