@@ -77,7 +77,7 @@ const Dropdown = styled.div``;
 const DropdownLi = styled.div`
   display: flex;
   height: ${props => (props.heigh ? "50px" : "45px")};
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-top: ${props => (props.margy ? "20px" : "0px")};
 `;
@@ -86,7 +86,7 @@ const DropdownContent = styled.ul`
   background-color: white;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   flex: auto;
   visibility: hidden;
   opacity: 0;

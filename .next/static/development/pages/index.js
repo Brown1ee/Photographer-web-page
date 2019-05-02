@@ -328,7 +328,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background-color: white;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  flex: auto;\n  visibility: hidden;\n  opacity: 0;\n  position: absolute;\n  width: 100px;\n  margin-left: 20px;\n  transform: translateY(-3px);\n  z-index: -1;\n  transition: all 0.3s ease-in-out;\n  ", ":hover & {\n    display: block;\n    visibility: visible;\n    opacity: 1;\n    z-index: 1;\n    transform: translateY(0%);\n    transition-delay: 0s, 0s, 0.5s;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background-color: white;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n  flex: auto;\n  visibility: hidden;\n  opacity: 0;\n  position: absolute;\n  width: 100px;\n  margin-left: 20px;\n  transform: translateY(-3px);\n  z-index: -1;\n  transition: all 0.3s ease-in-out;\n  ", ":hover & {\n    display: block;\n    visibility: visible;\n    opacity: 1;\n    z-index: 1;\n    transform: translateY(0%);\n    transition-delay: 0s, 0s, 0.5s;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -338,7 +338,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  height: ", ";\n  justify-content: center;\n  align-items: center;\n  margin-top: ", ";\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  height: ", ";\n  justify-content: flex-start;\n  align-items: center;\n  margin-top: ", ";\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
