@@ -21,7 +21,6 @@ class Toggle extends React.Component {
     let sideDrawer;
     let backdrop;
     if (this.state.sideDrawerOpen) {
-      sideDrawer = <OpenSlideBar />;
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
 
@@ -30,7 +29,7 @@ class Toggle extends React.Component {
         <DrawerToogleButton
           drawerClickHandler={this.drawerToggleClickHandler}
         />
-        {sideDrawer}
+        <OpenSlideBar show={this.state.sideDrawerOpen} />
         {backdrop}
       </div>
     );
