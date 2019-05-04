@@ -3,26 +3,22 @@ import Link from "next/link";
 
 class OpenSlideBar extends React.Component {
   state = {
-    showMenu: false,
-    showSecondMenu: false
+    visiblePortfolioDropDown: false,
+    visibleVideoDropDown: false
   };
 
-  showMenu = e => {
-    this.setState(prevState => {
-      return {
-        showMenu: !prevState.showMenu,
-        showSecondMenu: false
-      };
-    });
+  togglePortfolio = e => {
+    this.setState(prevState => ({
+      visiblePortfolioDropDown: !prevState.visiblePortfolioDropDown,
+      visibleVideoDropDown: false
+    }));
   };
 
-  showSecondMenu = e => {
-    this.setState(prevState => {
-      return {
-        showSecondMenu: !prevState.showSecondMenu,
-        showMenu: false
-      };
-    });
+  toggleVideo = e => {
+    this.setState(prevState => ({
+      visibleVideoDropDown: !prevState.visibleVideoDropDown,
+      visiblePortfolioDropDown: false
+    }));
   };
 
   render() {
@@ -30,10 +26,8 @@ class OpenSlideBar extends React.Component {
     if (this.props.show) {
       drawerClasses = "side-drawer open";
     }
-    // let dropClasses = "drop-down-content";
-    // if (this.state.showMenu) {
-    //   dropClasses = "drop-down-content open-drop";
-    // }
+    const { visiblePortfolioDropDown, visibleVideoDropDown } = this.state;
+
     return (
       <nav className={drawerClasses}>
         <Ul>
@@ -44,19 +38,19 @@ class OpenSlideBar extends React.Component {
           </li>
           <li>
             <div className="drop-down">
-              <A onClick={this.showMenu}>PORTFOLIO</A>
-              {this.state.showMenu && (
+              <A onClick={this.togglePortfolio}>PORTFOLIO</A>
+              {visiblePortfolioDropDown && (
                 <div className="drop-down-content">
-                  <DropdownLi margy heigh>
-                    <Link href="/wedding">
-                      <A>WEDDING</A>
+                  <div margy heigh className="dropdown-div animated fadeInDown">
+                    <Link href="/weddings">
+                      <A>WEDDINGS</A>
                     </Link>
-                  </DropdownLi>
-                  <DropdownLi>
+                  </div>
+                  <div className="dropdown-div animated fadeInDown">
                     <Link href="/light">
                       <A>NATURAL LIGHT</A>
                     </Link>
-                  </DropdownLi>
+                  </div>
                 </div>
               )}
             </div>
@@ -69,20 +63,20 @@ class OpenSlideBar extends React.Component {
           </li>
           <li>
             <div className="drop-down">
-              <A onClick={this.showSecondMenu}>VIDEO</A>
-              {this.state.showSecondMenu && (
-                <DropdownContent>
-                  <DropdownLi margy heigh>
+              <A onClick={this.toggleVideo}>VIDEO</A>
+              {visibleVideoDropDown && (
+                <div className="drop-down-content">
+                  <div margy heigh className="dropdown-div animated fadeInDown">
                     <Link href="/photoshoots">
                       <A>PHOTOSHOOTS: making of</A>
                     </Link>
-                  </DropdownLi>
-                  <DropdownLi>
+                  </div>
+                  <div className="dropdown-div animated fadeInDown">
                     <Link href="/travel">
                       <A>TRAVEL VIDEO</A>
                     </Link>
-                  </DropdownLi>
-                </DropdownContent>
+                  </div>
+                </div>
               )}
             </div>
           </li>
@@ -99,6 +93,13 @@ class OpenSlideBar extends React.Component {
         </Ul>
         <style jsx>
           {`
+            .dropdown-div {
+              display: flex;
+              height: ${props => (props.heigh ? "50px" : "45px")};
+              justify-content: center;
+              align-items: center;
+              margin-top: ${props => (props.margy ? "20px" : "0px")};
+            }
             .drop-down-content {
               display: flex;
               display: block;
@@ -109,9 +110,6 @@ class OpenSlideBar extends React.Component {
               z-index: 1;
               font-size: 10px;
             }
-            // .drop-down-content.open-drop {
-            //   transform: translateY(100px)
-            // }
             .drop-down {
               display: flex;
               flex-direction: column;
@@ -121,7 +119,6 @@ class OpenSlideBar extends React.Component {
             .side-drawer {
               height: 100%;
               background: white;
-              box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
               position: fixed;
               top: 0;
               left: 0;
@@ -142,16 +139,6 @@ class OpenSlideBar extends React.Component {
 }
 
 export default OpenSlideBar;
-
-// const Dropdown = styled.div``;
-
-const DropdownLi = styled.div`
-  display: flex;
-  height: ${props => (props.heigh ? "50px" : "45px")};
-  justify-content: center;
-  align-items: center;
-  margin-top: ${props => (props.margy ? "20px" : "0px")};
-`;
 
 const DropdownContent = styled.div`
   display: flex;
@@ -178,7 +165,4 @@ const A = styled.a`
   text-decoration: none;
   line-height: 50px;
   cursor: pointer;
-  &:hover {
-    color: #a6a6ad;
-  }
 `;

@@ -18,7 +18,6 @@ class Toggle extends React.Component {
   };
 
   render() {
-    let sideDrawer;
     let backdrop;
     if (this.state.sideDrawerOpen) {
       backdrop = <Backdrop click={this.backdropClickHandler} />;

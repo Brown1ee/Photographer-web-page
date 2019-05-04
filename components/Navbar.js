@@ -23,8 +23,8 @@ const Navbar = props => (
           <NavLi>PORTFOLIO</NavLi>
           <DropdownContent>
             <DropdownLi margy heigh>
-              <Link href="/wedding">
-                <NavLi marg>WEDDING</NavLi>
+              <Link href="/weddings">
+                <NavLi marg>WEDDINGS</NavLi>
               </Link>
             </DropdownLi>
             <DropdownLi>
@@ -79,7 +79,7 @@ const DropdownLi = styled.div`
   height: ${props => (props.heigh ? "50px" : "45px")};
   justify-content: flex-start;
   align-items: center;
-  margin-top: ${props => (props.margy ? "20px" : "0px")};
+  margin-top: ${props => (props.margy ? "10px" : "0px")};
 `;
 
 const DropdownContent = styled.ul`
@@ -92,14 +92,14 @@ const DropdownContent = styled.ul`
   opacity: 0;
   position: absolute;
   width: 100px;
-  margin-left: 20px;
+  margin-left: 30px;
   transform: translateY(-3px);
   z-index: -1;
   transition: all 0.3s ease-in-out;
   ${Dropdown}:hover & {
     display: block;
     visibility: visible;
-    opacity: 1;
+    opacity: 0.9;
     z-index: 1;
     transform: translateY(0%);
     transition-delay: 0s, 0s, 0.5s;

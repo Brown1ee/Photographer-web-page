@@ -69,8 +69,9 @@ const ToggleButton = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 24px;
-  width: 30px;
+  height: 20px;
+  width: 25px;
+  margin-right: 10px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -85,7 +86,7 @@ const ToggleButton = styled.button`
 `;
 
 const ToggleButtonLine = styled.div`
-  width: 30px;
-  height: 3px;
+  width: 25px;
+  height: 2px;
   background: #4a4a4a;
 `;
