@@ -12,6 +12,7 @@
     "start": "next start"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "babel-plugin-styled-components": "^1.10.0"
   }
 }
