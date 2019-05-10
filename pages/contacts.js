@@ -62,6 +62,42 @@ const Contacts = () => (
         width: 400px;
         height: 400px;
       }
+      @media only screen and (max-width: 500px) {
+        .form-and-image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-top: 50px;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          margin: auto;
+          margin-top: 30px;
+        }
+        input {
+          height: 50px;
+          margin: 10px;
+          padding-left: 10px;
+          font-size: 10px;
+          display: flex;
+          flex-wrap: wrap;
+          border: 1px solid silver;
+        }
+        img {
+          width: 95%;
+          height: 400px;
+        }
+        button {
+          border-radius: 30px;
+          height: 40px;
+          background-color: silver;
+          color: white;
+          border: none;
+        }
+      }
     `}</style>
   </Layout>
 );
