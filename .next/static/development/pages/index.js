@@ -16606,7 +16606,7 @@ var Portrait = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].img.wit
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!***************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cdell%5CDesktop%5CWebPAGE%5Cpages%5Cindex.js ***!
   \***************************************************************************************************************************/
@@ -16629,5 +16629,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
