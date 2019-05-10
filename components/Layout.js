@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
 import Toggle from "./Toggle";
+import Copyrights from "./copyrights";
 
 const Layout = props => (
   <div>
@@ -25,7 +26,9 @@ const Layout = props => (
     </Head>
     <Navbar />
     <Toggle />
+
     {props.children}
+    <Copyrights />
   </div>
 );
 
