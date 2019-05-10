@@ -4,6 +4,7 @@ const Wanderlust = () => (
   <Layout>
     <div>
       <h1>Wanderlust: travel lover</h1>
+      <div />
     </div>
   </Layout>
 );
