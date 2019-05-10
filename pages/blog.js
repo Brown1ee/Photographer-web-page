@@ -65,8 +65,59 @@ const BlogNavbar = () => (
         </Link>
       </li>
     </ul>
+
+    <div className="blog-image-container">
+      <img
+        className="blog-image"
+        src="https://static1.squarespace.com/static/599acb35e58c62168c0713b8/t/59f8d3dee31d191cb6978e45/1509479420988/Lago+di+Braies+-+photo+session?format=500w"
+      />
+      <img
+        className="blog-image"
+        src="https://www.oncewed.com/wp-content/uploads/2019/02/TaylorPorter-Emily-Riggs-Utah-Editorial-16-1300x1746.jpg"
+      />
+      <img
+        className="blog-image"
+        src="https://i.pinimg.com/originals/0a/32/28/0a3228219bf426f4d056cf84dab7cdc1.jpg"
+      />
+      <img
+        className="blog-image"
+        src="https://img.onethreeonefour.com/ab9af066-af39-42a7-a25f-82a372a0c4af.jpg"
+      />
+      <img
+        className="blog-image"
+        src="https://cdn.trendhunterstatic.com/thumbs/women-of-color-editorial.jpeg"
+      />
+      <img
+        className="blog-image"
+        src="https://www.elopement-photography.com/wp-content/uploads/2019/04/Wedding-Elopement-Lago-Di-Braies-Pragser-WildSee-couple-photos-0001.jpg"
+      />
+      <img
+        className="blog-image"
+        src="https://tanglewoodestate.com.au/wp-content/uploads/2017/05/Jessica-Rose-Photography_Tanglewood__34-683x1024.jpg"
+      />
+      <img
+        className="blog-image"
+        src="http://www.melissajill.com/images/content/AZEngagementLocations_231.jpg"
+      />
+    </div>
     <style jsx>{`
-      ul {
+      .blog-image-container {
+        display: flex;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: center;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 30px;
+      }
+      .blog-image {
+        width: 300px;
+        height: 400px;
+        display: flex;
+        padding: 20px;
+      }
+
+      @media only screen and () ul {
         display: flex;
         margin: auto;
         flex: auto;

@@ -134,9 +134,23 @@ const Index = () => (
         </div>
       </div>
     </div>
+    <div className="icons">
+      <i className="fab fa-instagram" />
+      <i className="fab fa-facebook-f" />
+      <i className="fab fa-youtube" />
+    </div>
     <div className="copyright">&copy;xeniabrown.com</div>
 
     <style jsx>{`
+      i {
+        padding: 10px;
+        border-radius: 50%;
+        margin-top: 20px;
+      }
+      .icons {
+        display: flex;
+        justify-content: center;
+      }
       .copyright {
         text-align: center;
         color: #4a4a4a;
@@ -149,57 +163,95 @@ const Index = () => (
         font-family: "Didact Gothic", sans-serif;
       }
 
-      .photo {
-        max-width: 200px;
-        max-height: 200px;
-        min-width: 150px;
-        min-height: 150px;
-        padding: 10px;
-        cursor: pointer;
-        display: flex;
-        flex: auto;
-      }
-      .first-five {
-        display: flex;
-        justify-content: center;
-        width: 80%;
-        flex: auto;
-      }
-      @media only screen and (max-width: 900px) {
-        .first-five {
-          display: flex;
-          justify-content: center;
-          width: 80%;
-          flex: auto;
-          flex-direction: column;
-          justify-content: center;
-        }
+      @media only screen and (min-width: 900px) {
         .photo {
-          max-width: 500px;
-          max-height: 500px;
-          min-height: 200px;
-          padding: 10px;
+          width: 190px;
+          height: 190px;
+          max-width: 190px;
+          max-height: 190px;
+          min-width: 150px;
+          min-height: 150px;
+          padding: 5px;
           cursor: pointer;
           display: flex;
           flex: auto;
         }
+        .first-five {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 80%;
+          flex: auto;
+          flex-wrap: wrap;
+        }
         .insta {
           display: flex;
-          flex-wrap: wrap;
-          width: 100%;
           flex-direction: column;
           align-items: center;
+          // flex-wrap: wrap;
+          width: 100%;
+          // flex: auto;
         }
       }
-      .insta {
-        display: flex;
-        flex-wrap: wrap;
-        width: 90%;
-        margin: auto;
-        flex-direction: column;
-        flex: auto;
-        align-items: center;
+
+      @media only screen and (max-width: 900px) {
+        .first-five {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          width: 80%;
+          flex: auto;
+        }
+        .photo {
+          height: 350px;
+          width: 350px;
+          padding: 5px;
+          cursor: pointer;
+          // display: flex;
+          // flex: auto;
+        }
+        .insta {
+          display: flex;
+          // flex-direction: column;
+          align-items: center;
+          flex-wrap: wrap;
+          flex: auto;
+          width: 100%;
+        }
       }
+
+      @media only screen and (max-width: 400px) {
+        .first-five {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          width: 80%;
+          flex: auto;
+        }
+        .photo {
+          height: 350px;
+          width: 290px;
+          padding: 5px;
+          cursor: pointer;
+          // display: flex;
+          // flex: auto;
+        }
+        .insta {
+          display: flex;
+          // flex-direction: column;
+          align-items: center;
+          flex-wrap: wrap;
+          flex: auto;
+          width: 100%;
+        }
+      }
+
       a {
         text-decoration: none;
         color: white;
@@ -223,28 +275,25 @@ const Index = () => (
 
       .description {
         position: absolute;
-        width: 99%;
-      }
-
-      video {
-        display: block;
+        width: 95%;
       }
 
       @media only screen and (max-width: 1100px) {
         .myVideo {
           display: flex;
+          justify-content: center;
           flex: auto;
           max-height: 600px;
           overflow: hidden;
           z-index: -100;
-          width: 100%;
+          // width: 100%;
         }
         .video-bg {
           display: flex;
           flex: auto;
           position: relative;
-          left: -100px;
-          width: 122%;
+          left: -30px;
+          width: 132%;
           height: auto;
           background: transparent url(video-bg.jpg) no-repeat;
           background-size: cover;
@@ -264,7 +313,7 @@ const Index = () => (
           display: flex;
           flex: auto;
           position: relative;
-          left: -90px;
+          left: -30px;
           width: 132%;
           height: auto;
           background: transparent url(video-bg.jpg) no-repeat;
@@ -285,7 +334,7 @@ const Index = () => (
           display: flex;
           flex: auto;
           position: relative;
-          left: -90px;
+          left: -5px;
           width: 132%;
           height: auto;
           background: transparent url(video-bg.jpg) no-repeat;
@@ -350,7 +399,7 @@ const Index = () => (
       }
       .img {
         height: 390px;
-        width: 390px;
+        width: 290px;
         // min-height: 200px;
         // min-width: 200px;
         // display: flex;
