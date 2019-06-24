@@ -1,4 +1,8 @@
 {
+  "name": "coolnodeapp",
+  "version": "1.0.0",
+  "description": "node app ",
+  "main": "app.js",
   "dependencies": {
     "animate.css": "^3.7.0",
     "next": "^8.1.0",
@@ -9,7 +13,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "node app.js"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
