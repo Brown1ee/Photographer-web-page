@@ -1,8 +1,4 @@
 {
-  "name": "coolnodeapp",
-  "version": "1.0.0",
-  "description": "node app ",
-  "main": "app.js",
   "dependencies": {
     "animate.css": "^3.7.0",
     "next": "^8.1.0",
@@ -13,7 +9,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "node app.js"
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
