@@ -16,7 +16,7 @@ const Index = () => (
         <p>for general questions, please contact me at</p>
         <p>kseniushka16@gmail.com</p>
       </Text>
-      <Portrait src="../static/portrait.jpg" />
+      <Portrait src="../static/skill-photo.png" />
     </Arange>
     <hr />
     <h2>LATEST ON MY BLOG</h2>
@@ -26,21 +26,19 @@ const Index = () => (
           <h3>Models</h3>
           <img
             className="img"
-            src="https://cdn.fstoppers.com/styles/full/s3/media/2016/09/15/marissa-alden-organising-a-fashion-photoshoot-without-a-professional-team-1.jpg"
+            src="../static/Models.jpg
+            "
           />
         </div>
         <div className="one-image">
           <h3>Shine Bright</h3>
-          <img
-            className="img"
-            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/00001-oscar-de-la-renta-fall-2019-bridal-1540849932.jpg"
-          />
+          <img className="img" src="../static/Shine-Bright.jpg" />
         </div>
         <div className="one-image">
           <h3>M and E weeding photo shoot</h3>
           <img
             className="img"
-            src="https://i.pinimg.com/originals/c6/54/8e/c6548ee979a000d792f3b0be7f10bc05.jpg"
+            src="../static/M-and-E-weeding-photo-shoot.jpg"
           />
         </div>
       </div>
@@ -48,24 +46,15 @@ const Index = () => (
       <div className="three-photo">
         <div className="one-image">
           <h3>wedding day</h3>
-          <img
-            className="img"
-            src="https://www.blogilates.com/wp-content/uploads/2018/10/thekiss.jpg"
-          />
+          <img className="img" src="../static/wedding-day.jpg" />
         </div>
         <div className="one-image">
           <h3>Happy day</h3>
-          <img
-            className="img"
-            src="https://img1.southernliving.timeinc.net/sites/default/files/styles/4_3_horizontal_-_1200x900/public/image/2017/06/main/autumn-charleston-wedding-jophoto-kn5a9998.jpg?itok=qx_rETsz"
-          />
+          <img className="img" src="../static/Happy-day.jpg" />
         </div>
         <div className="one-image">
           <h3>Australian sunset</h3>
-          <img
-            className="img"
-            src="https://www.seandkate.com/wp-content/uploads/2017/06/spain-wedding-photographer-0049-600x390.jpg"
-          />
+          <img className="img" src="../static/Australian-sunset.jpg" />
         </div>
       </div>
     </div>
@@ -93,10 +82,7 @@ const Index = () => (
             className="photo"
             src="https://queenstowninsider.com/wp-content/uploads/2016/08/girl-taking-picture-sina.jpg"
           />
-          <img
-            className="photo"
-            src="http://lezincnyc.com/wp-content/uploads/2018/10/tumblr-pictures-cool-photography-on-pensarisgood-1440x900.jpg"
-          />
+          <img className="photo" src="../static/lapland-t.jpg" />
           <img
             className="photo"
             src="https://static1.squarespace.com/static/52dd543ae4b0ce292b48a5f6/566f056469a91ab79737075a/566f07cc5a5668e198540d2f/1450118661328/ZackRoifLandscapePhotography.jpg"
@@ -414,6 +400,7 @@ const Image = styled.div`
   background-image: url("https://blog.infinityeventsandcatering.com/wp-content/uploads/2019/01/Lacey-Brandon_Bridge-Building-Wedding_28.jpg");
   height: 580px;
   background-position-y: 13.75%;
+  
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

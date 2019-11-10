@@ -24,11 +24,17 @@ const Layout = props => (
         crossOrigin="anonymous"
       />
     </Head>
+
     <Navbar />
     <Toggle />
 
     {props.children}
     <Copyrights />
+    <style jsx global>{`
+      body {
+        margin: 0;
+      }
+    `}</style>
   </div>
 );
 
