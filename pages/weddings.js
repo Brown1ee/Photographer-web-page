@@ -14,10 +14,7 @@ const Weddings = () => (
         <div className="image-and-text">
           <h2>sunshine</h2>
 
-          <img
-            className="image"
-            src="https://www.kateaspen.com/blog/wp-content/uploads/2016/01/Bride-and-Groom-Under-Canopy-Garden-Wedding-Shoot-Leslie-Ann-Photography.jpg"
-          />
+          <img className="image" src="../static/sunshine.jpg" />
         </div>
         <div className="image-and-text">
           <h2>royal wedding</h2>
@@ -35,10 +32,7 @@ const Weddings = () => (
         </div>
         <div className="image-and-text">
           <h2>special day for two</h2>
-          <img
-            className="image"
-            src="http://auroravine.com/wp-content/uploads/2018/02/Trend-Church-Arch-Wedding-Flowers-36-Wedding-Decoration-Ideas-with-Church-Arch-Wedding-Flowers.jpg"
-          />
+          <img className="image" src="../static/special-day-for-two.jpg" />
         </div>
 
         <div className="image-and-text">

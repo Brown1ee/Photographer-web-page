@@ -61,10 +61,7 @@ const Wanderlust = () => (
       </div>
       <div className="image-and-text">
         <h2>blue lagoon</h2>
-        <img
-          className="image"
-          src="http://comejourney.org/wp-content/uploads/beautiful-breathtaking-scenery-places-pinterest-breathtaking-travel-destinations.jpg"
-        />
+        <img className="image" src="../static/blue-lagoon.jpg" />
       </div>
     </div>
     <style jsx>

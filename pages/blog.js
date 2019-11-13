@@ -76,10 +76,7 @@ const BlogNavbar = () => (
       </div>
       <div>
         <h2 className="header">desert</h2>
-        <img
-          className="blog-image"
-          src="https://www.oncewed.com/wp-content/uploads/2019/02/TaylorPorter-Emily-Riggs-Utah-Editorial-16-1300x1746.jpg"
-        />
+        <img className="blog-image" src="../static/dessert.jpg" />
       </div>
       <div>
         <h2 className="header">rock the world</h2>
@@ -90,10 +87,7 @@ const BlogNavbar = () => (
       </div>
       <div>
         <h2 className="header">forest</h2>
-        <img
-          className="blog-image"
-          src="https://img.onethreeonefour.com/ab9af066-af39-42a7-a25f-82a372a0c4af.jpg"
-        />
+        <img className="blog-image" src="../static/forest.jpg" />
       </div>
       <div>
         <h2 className="header">glam</h2>
